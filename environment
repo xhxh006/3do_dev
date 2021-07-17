@@ -1,0 +1,8 @@
+[Version]
+Java: 8
+jre :1.8
+Eclipse: 2019-06
+Spring boot: 2.5.2
+Git: 2.32.0.windows.2
+MariaDB:
+Tomcat:
