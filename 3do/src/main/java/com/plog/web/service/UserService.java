@@ -15,15 +15,16 @@ public class UserService {
 	
 	@Transactional
 	public String register(UserDTO userDto) {
-
+		
 		UserEntity user = userDto.toEntity();
-				
+		
 		try {
 			if(userRepository.findByEmail(user.getEmail()) != null) {
 				return "EXIST";
 			}
 			userRepository.save(user);
 		} catch (Exception e) {
+			e.printStackTrace();
 			return "ERROR";
 		}
 		
